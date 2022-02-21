@@ -44,7 +44,7 @@
 		public EncapsulationType EncapsulationType { get; set; }
 		public List<ProductToBuy> ShoppingCart { get; set; }
 		public List<ProductRequest> ProductRequests { get; set; }
-		public List<ProductChangeLog> ProductChangeLogs { get; set; }
+		public List<ProductChangelog> ProductChangeLogs { get; set; }
 		public List<Category> Categories { get; set; }
 
 		public Product()

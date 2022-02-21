@@ -1,6 +1,6 @@
 ﻿namespace Mux.Model
 {
-	public class ProductChangeLog
+	public class ProductChangelog
 	{
 #pragma warning disable 8632
 		public int? Id { get; set; }
@@ -19,7 +19,7 @@
 		public int? ProductId { get; set; }
 #pragma warning restore 8632
 		
-		public ProductChangeLog()
+		public ProductChangelog()
 		{
 			Id = 0;
 			Date = DateTime.Now;
