@@ -4,7 +4,7 @@ using Mux.Model;
 
 namespace Mux.Entity;
 
-public class MountingTechnologyEntity : IEntityTypeConfiguration<MountingTechnology>
+internal class MountingTechnologyEntity : IEntityTypeConfiguration<MountingTechnology>
 {
 	public void Configure(EntityTypeBuilder<MountingTechnology> builder)
 	{
