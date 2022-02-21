@@ -44,6 +44,8 @@ namespace Mux.Model
 #pragma warning restore 8632
 		public int EncapsulationTypeId { get; set; }
 		public EncapsulationType EncapsulationType { get; set; }
+		public int MountingTechnologyId { get; set; }
+		public MountingTechnology MountingTechnology { get; set; }
 		public List<ProductToBuy> ShoppingCart { get; set; }
 		public List<ProductRequest> ProductRequests { get; set; }
 		public List<ProductChangelog> ProductChangeLogs { get; set; }
