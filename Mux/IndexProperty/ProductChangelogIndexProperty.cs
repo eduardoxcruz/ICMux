@@ -16,6 +16,10 @@ namespace Mux.IndexProperty
 				.Entity<ProductChangelog>()
 				.HasIndex(recordOfProductMovement => recordOfProductMovement.EmployeeId)
 				.IsUnique(false);
+
+			modelBuilder.Entity<ProductChangelog>()
+				.HasIndex(productChangelog => productChangelog.ProviderId)
+				.IsUnique(false);
 		}
 	}
 }
