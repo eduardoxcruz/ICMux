@@ -1,6 +1,14 @@
-﻿namespace Mux.NavigationProperty;
+﻿using Microsoft.EntityFrameworkCore;
+using Mux.Model;
 
-public class MountingTechnologyNavigationProperty
+namespace Mux.NavigationProperty;
+
+public class MountingTechnologyNavigationProperty : NavigationPropertyConfiguration
 {
-	
+	public void Configure(ref ModelBuilder modelBuilder)
+	{
+		modelBuilder.Entity<MountingTechnology>()
+			.Navigation(mountingTechnology => mountingTechnology.Products)
+			.UsePropertyAccessMode(PropertyAccessMode.Property);
+	}
 }
