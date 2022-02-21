@@ -73,6 +73,7 @@ public class ICContext : DbContext
 		new ProductNavigationProperty().Configure(ref modelBuilder);
 		new EmployeeNavigationProperty().Configure(ref modelBuilder);
 		new EncapsulationTypeNavigationProperty().Configure(ref modelBuilder);
+		new MountingTechnologyNavigationProperty().Configure(ref modelBuilder);
 	}
 
 	private static void StartIndexPropertiesConfiguration(ref ModelBuilder modelBuilder)
