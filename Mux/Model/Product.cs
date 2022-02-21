@@ -23,7 +23,7 @@ namespace Mux.Model
 		public string? Rack { get; set; }
 		public string? Shelf { get; set; }
 		public decimal? BuyPrice { get; set; }
-		public string? UnitType { get; set; }
+		public string? OldUnitType { get; set; }
 		public string? OldManufacturer { get; set; }
 		public string? PartNumber { get; set; }
 		public string? TypeOfStock { get; set; }
@@ -74,7 +74,7 @@ namespace Mux.Model
 			Rack = "";
 			Shelf = "";
 			BuyPrice = 0.0M;
-			UnitType = "";
+			OldUnitType = "";
 			TypeOfStock = "";
 			OldManufacturer = "";
 			PartNumber = "";
