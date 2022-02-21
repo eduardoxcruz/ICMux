@@ -4,6 +4,12 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>IndustrialComplements.Mux</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>José Eduardo Cruz Rosano</Authors>
+        <Company>FullD-Software</Company>
+        <Description>Provide a API for models and Context of IC Database using EF Core.</Description>
+        <RepositoryUrl>https://github.com/FullD-Development/ICMux</RepositoryUrl>
     </PropertyGroup>
 
 </Project>
