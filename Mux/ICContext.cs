@@ -82,6 +82,7 @@ public class ICContext : DbContext
 		new EmployeeNavigationProperty().Configure(ref modelBuilder);
 		new EncapsulationTypeNavigationProperty().Configure(ref modelBuilder);
 		new MountingTechnologyNavigationProperty().Configure(ref modelBuilder);
+		new UnitTypeNavigationProperty().Configure(ref modelBuilder);
 	}
 
 	private static void StartIndexPropertiesConfiguration(ref ModelBuilder modelBuilder)
