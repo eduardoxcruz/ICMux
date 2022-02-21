@@ -62,6 +62,7 @@ public class ICContext : DbContext
 		new MountingTechnologyEntity().Configure(modelBuilder.Entity<MountingTechnology>());
 		new ProviderEntity().Configure(modelBuilder.Entity<Provider>());
 		new ManufacturerEntity().Configure(modelBuilder.Entity<Manufacturer>());
+		new UnitTypeEntity().Configure(modelBuilder.Entity<UnitType>());
 	}
 
 	private static void StartRelationshipsConfiguration(ref ModelBuilder modelBuilder)
