@@ -3,7 +3,7 @@ using Mux.Model;
 
 namespace Mux.NavigationProperty;
 
-public class MountingTechnologyNavigationProperty : NavigationPropertyConfiguration
+internal class MountingTechnologyNavigationProperty : NavigationPropertyConfiguration
 {
 	public void Configure(ref ModelBuilder modelBuilder)
 	{
