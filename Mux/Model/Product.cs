@@ -9,7 +9,7 @@ namespace Mux.Model
 		public string? DebugCode { get; set; }
 		public string? Status { get; set; }
 		public string? Enrollment { get; set; }
-		public string? MountingTechnology { get; set; }
+		public string? OldMountingTechnology { get; set; }
 		public string? OldEncapsulationType { get; set; }
 		public string? ShortDescription { get; set; }
 		public string? Category { get; set; }
@@ -55,7 +55,7 @@ namespace Mux.Model
 			DebugCode = "";
 			Status = "";
 			Enrollment = "";
-			MountingTechnology = "";
+			OldMountingTechnology = "";
 			OldEncapsulationType = "";
 			Category = "";
 			ShortDescription = "";

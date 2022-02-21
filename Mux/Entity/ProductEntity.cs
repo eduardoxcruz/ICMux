@@ -133,7 +133,7 @@ namespace Mux.Entity
 				.IsUnicode(false);
 
 			builder
-				.Property(product => product.MountingTechnology)
+				.Property(product => product.OldMountingTechnology)
 				.HasMaxLength(16)
 				.IsUnicode(false);
 
