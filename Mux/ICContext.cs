@@ -19,6 +19,7 @@ public class ICContext : DbContext
 	public virtual DbSet<Category> Categories { get; set; }
 	public virtual DbSet<EncapsulationType> EncapsulationTypes { get; set; }
 	public virtual DbSet<MountingTechnology> MountingTechnologies { get; set; }
+	public virtual DbSet<Provider> Providers { get; set; }
 
 	public ICContext()
 	{
