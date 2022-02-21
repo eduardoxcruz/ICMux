@@ -19,6 +19,8 @@ namespace Mux.Model
 		public int? EmployeeId { get; set; }
 		public Product Product { get; set; }
 		public int? ProductId { get; set; }
+		public int? ProviderId { get; set; }
+		public Provider Provider { get; set; }
 #pragma warning restore 8632
 		
 		public ProductChangelog()
