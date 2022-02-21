@@ -14,6 +14,10 @@ namespace Mux.IndexProperty
 			modelBuilder.Entity<Product>()
 				.HasIndex(product => product.MountingTechnologyId)
 				.IsUnique(false);
+
+			modelBuilder.Entity<Product>()
+				.HasIndex(product => product.ManufacturerId)
+				.IsUnique(false);
 		}
 	}
 }
