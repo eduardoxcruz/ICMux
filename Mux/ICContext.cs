@@ -56,6 +56,7 @@ public class ICContext : DbContext
 		new EmployeeEntity().Configure(modelBuilder.Entity<Employee>());
 		new CategoryEntity().Configure(modelBuilder.Entity<Category>());
 		new EncapsulationTypeEntity().Configure(modelBuilder.Entity<EncapsulationType>());
+		new MountingTechnologyEntity().Configure(modelBuilder.Entity<MountingTechnology>());
 	}
 
 	private static void StartRelationshipsConfiguration(ref ModelBuilder modelBuilder)
