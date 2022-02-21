@@ -29,7 +29,7 @@ namespace Mux.Relationship
 				.HasOne(product => product.UnitType)
 				.WithMany(unitType => unitType.Products)
 				.HasForeignKey(product => product.UnitTypeId)
-				.OnDelete(DeleteBehavior.SetNull);
+				.OnDelete(DeleteBehavior.ClientSetNull);
 		}
 	}
 }
