@@ -12,6 +12,12 @@ namespace Mux.Relationship
 				.WithMany(encapsulationType => encapsulationType.Products)
 				.HasForeignKey(product => product.EncapsulationTypeId)
 				.OnDelete(DeleteBehavior.ClientCascade);
+
+			modelBuilder.Entity<Product>()
+				.HasOne(product => product.MountingTechnology)
+				.WithMany(mountingTechnology => mountingTechnology.Products)
+				.HasForeignKey(product => product.MountingTechnologyId)
+				.OnDelete(DeleteBehavior.Cascade);
 		}
 	}
 }
