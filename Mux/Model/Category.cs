@@ -1,4 +1,6 @@
-﻿namespace Mux.Model
+﻿using System.Collections.Generic;
+
+namespace Mux.Model
 {
 	public class Category
 	{
