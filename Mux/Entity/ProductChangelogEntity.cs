@@ -36,7 +36,7 @@ namespace Mux.Entity
 				.HasMaxLength(200)
 				.IsUnicode(false);
 
-			builder.Property(recordOfProductMovement => recordOfProductMovement.Provider)
+			builder.Property(recordOfProductMovement => recordOfProductMovement.OldProvider)
 				.HasMaxLength(50)
 				.IsUnicode(false);
 

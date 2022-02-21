@@ -12,7 +12,7 @@ namespace Mux.Model
 		public int? PreviousAmount { get; set; }
 		public int? NewAmount { get; set; }
 		public decimal? PurchasePrice { get; set; }
-		public string? Provider { get; set; }
+		public string? OldProvider { get; set; }
 		public string? ProductFullDescription { get; set; }
 		public string? EmployeeName { get; set; }
 		public Employee Employee { get; set; }
@@ -30,7 +30,7 @@ namespace Mux.Model
 			PreviousAmount = 0;
 			NewAmount = 0;
 			PurchasePrice = 0;
-			Provider = "";
+			OldProvider = "";
 			ProductFullDescription = "";
 			EmployeeName = "";
 		}
