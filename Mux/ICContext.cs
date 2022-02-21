@@ -58,6 +58,7 @@ public class ICContext : DbContext
 		new CategoryEntity().Configure(modelBuilder.Entity<Category>());
 		new EncapsulationTypeEntity().Configure(modelBuilder.Entity<EncapsulationType>());
 		new MountingTechnologyEntity().Configure(modelBuilder.Entity<MountingTechnology>());
+		new ProviderEntity().Configure(modelBuilder.Entity<Provider>());
 	}
 
 	private static void StartRelationshipsConfiguration(ref ModelBuilder modelBuilder)
