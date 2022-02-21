@@ -1,6 +1,6 @@
 ﻿namespace Mux.NavigationProperty;
 
-public class ManufacturerNavigationProperty
+internal class ManufacturerNavigationProperty
 {
 	
 }
