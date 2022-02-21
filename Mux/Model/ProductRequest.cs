@@ -1,4 +1,6 @@
-﻿namespace Mux.Model
+﻿using System;
+
+namespace Mux.Model
 {
 	public class ProductRequest
 	{
