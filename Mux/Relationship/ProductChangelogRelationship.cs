@@ -20,6 +20,13 @@ namespace Mux.Relationship
 				.WithMany(employee => employee.ProductChangelogs)
 				.HasForeignKey(recordOfProductMovement => recordOfProductMovement.EmployeeId)
 				.OnDelete(DeleteBehavior.SetNull);
+
+			modelBuilder
+				.Entity<ProductChangelog>()
+				.HasOne(productChangelog => productChangelog.Provider)
+				.WithMany(provider => provider.ProductChangelogs)
+				.HasForeignKey(productChangelog => productChangelog.ProviderId)
+				.OnDelete(DeleteBehavior.SetNull);
 		}
 	}
 }
