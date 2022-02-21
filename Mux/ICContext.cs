@@ -72,6 +72,7 @@ public class ICContext : DbContext
 
 	private static void StartNavigationPropertiesConfiguration(ref ModelBuilder modelBuilder)
 	{
+		new ProviderNavigationProperty().Configure(ref modelBuilder);
 		new ProductNavigationProperty().Configure(ref modelBuilder);
 		new EmployeeNavigationProperty().Configure(ref modelBuilder);
 		new EncapsulationTypeNavigationProperty().Configure(ref modelBuilder);
