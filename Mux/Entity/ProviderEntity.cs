@@ -4,7 +4,7 @@ using Mux.Model;
 
 namespace Mux.Entity;
 
-public class ProviderEntity : IEntityTypeConfiguration<Provider>
+internal class ProviderEntity : IEntityTypeConfiguration<Provider>
 {
 	public void Configure(EntityTypeBuilder<Provider> builder)
 	{
