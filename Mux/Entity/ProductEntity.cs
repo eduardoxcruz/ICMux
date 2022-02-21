@@ -118,7 +118,7 @@ namespace Mux.Entity
 				.IsUnicode(false);
 
 			builder
-				.Property(product => product.Manufacturer)
+				.Property(product => product.OldManufacturer)
 				.HasMaxLength(50)
 				.IsUnicode(false);
 

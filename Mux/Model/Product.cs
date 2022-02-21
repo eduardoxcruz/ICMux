@@ -24,7 +24,7 @@ namespace Mux.Model
 		public string? Shelf { get; set; }
 		public decimal? BuyPrice { get; set; }
 		public string? UnitType { get; set; }
-		public string? Manufacturer { get; set; }
+		public string? OldManufacturer { get; set; }
 		public string? PartNumber { get; set; }
 		public string? TypeOfStock { get; set; }
 		public bool? IsManualProfit { get; set; }
@@ -74,7 +74,7 @@ namespace Mux.Model
 			BuyPrice = 0.0M;
 			UnitType = "";
 			TypeOfStock = "";
-			Manufacturer = "";
+			OldManufacturer = "";
 			PartNumber = "";
 			IsManualProfit = true;
 			PercentageOfProfit = 0.0M;
