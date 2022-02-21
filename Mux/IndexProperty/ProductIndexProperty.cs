@@ -18,6 +18,10 @@ namespace Mux.IndexProperty
 			modelBuilder.Entity<Product>()
 				.HasIndex(product => product.ManufacturerId)
 				.IsUnique(false);
+
+			modelBuilder.Entity<Product>()
+				.HasIndex(product => product.UnitTypeId)
+				.IsUnique(false);
 		}
 	}
 }
