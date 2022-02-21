@@ -18,6 +18,12 @@ namespace Mux.Relationship
 				.WithMany(mountingTechnology => mountingTechnology.Products)
 				.HasForeignKey(product => product.MountingTechnologyId)
 				.OnDelete(DeleteBehavior.Cascade);
+
+			modelBuilder.Entity<Product>()
+				.HasOne(product => product.Manufacturer)
+				.WithMany(manufacturer => manufacturer.Products)
+				.HasForeignKey(product => product.ManufacturerId)
+				.OnDelete(DeleteBehavior.Cascade);
 		}
 	}
 }
