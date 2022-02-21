@@ -18,7 +18,7 @@ namespace Inventory.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .UseCollation("Modern_Spanish_CI_AS")
-                .HasAnnotation("ProductVersion", "6.0.2")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -38,7 +38,7 @@ namespace Inventory.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Mux.Model.Employee", b =>
@@ -66,7 +66,7 @@ namespace Inventory.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("Mux.Model.EncapsulationType", b =>
@@ -94,7 +94,7 @@ namespace Inventory.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EncapsulationTypes");
+                    b.ToTable("EncapsulationTypes", (string)null);
                 });
 
             modelBuilder.Entity("Mux.Model.Product", b =>
@@ -257,10 +257,10 @@ namespace Inventory.Migrations
 
                     b.HasIndex("EncapsulationTypeId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
-            modelBuilder.Entity("Mux.Model.ProductChangelog", b =>
+            modelBuilder.Entity("Mux.Model.ProductChangeLog", b =>
                 {
                     b.Property<int?>("Id")
                         .HasColumnType("int");
@@ -313,7 +313,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductChangelogs");
+                    b.ToTable("ProductChangeLogs", (string)null);
                 });
 
             modelBuilder.Entity("Mux.Model.ProductRequest", b =>
@@ -354,7 +354,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductRequests");
+                    b.ToTable("ProductRequests", (string)null);
                 });
 
             modelBuilder.Entity("Mux.Model.ProductToBuy", b =>
@@ -395,7 +395,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ShoppingCart");
+                    b.ToTable("ShoppingCart", (string)null);
                 });
 
             modelBuilder.Entity("ProductCategories", b =>
@@ -410,7 +410,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductCategories");
+                    b.ToTable("ProductCategories", (string)null);
                 });
 
             modelBuilder.Entity("Mux.Model.Product", b =>
@@ -424,10 +424,10 @@ namespace Inventory.Migrations
                     b.Navigation("EncapsulationType");
                 });
 
-            modelBuilder.Entity("Mux.Model.ProductChangelog", b =>
+            modelBuilder.Entity("Mux.Model.ProductChangeLog", b =>
                 {
                     b.HasOne("Mux.Model.Employee", "Employee")
-                        .WithMany("ProductChangelogs")
+                        .WithMany("ProductChangeLogs")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.SetNull);
 
@@ -492,7 +492,7 @@ namespace Inventory.Migrations
 
             modelBuilder.Entity("Mux.Model.Employee", b =>
                 {
-                    b.Navigation("ProductChangelogs");
+                    b.Navigation("ProductChangeLogs");
 
                     b.Navigation("ProductRequests");
 
