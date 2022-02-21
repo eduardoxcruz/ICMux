@@ -1,6 +1,14 @@
-﻿namespace Mux.NavigationProperty;
+﻿using Microsoft.EntityFrameworkCore;
+using Mux.Model;
 
-internal class ManufacturerNavigationProperty
+namespace Mux.NavigationProperty;
+
+internal class ManufacturerNavigationProperty : NavigationPropertyConfiguration
 {
-	
+	public void Configure(ref ModelBuilder modelBuilder)
+	{
+		modelBuilder.Entity<Manufacturer>()
+			.Navigation(manufacturer => manufacturer.Products)
+			.UsePropertyAccessMode(PropertyAccessMode.Property);
+	}
 }
