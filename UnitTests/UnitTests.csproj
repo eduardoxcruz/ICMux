@@ -22,8 +22,4 @@
 		<ProjectReference Include="..\Mux\Mux.csproj"/>
 	</ItemGroup>
 
-	<ItemGroup>
-		<EditorConfigFiles Include=".editorconfig"/>
-	</ItemGroup>
-
 </Project>
