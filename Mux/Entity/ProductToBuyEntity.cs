@@ -24,7 +24,7 @@ namespace Mux.Entity
 				.IsUnicode(false);
 
 			builder
-				.Property(productForBuy => productForBuy.Provider)
+				.Property(productForBuy => productForBuy.OldProvider)
 				.HasMaxLength(35)
 				.IsUnicode(false);
 

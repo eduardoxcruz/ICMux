@@ -6,7 +6,7 @@ namespace Mux.Model
 	{
 #pragma warning disable 8632
 		public int? Id { get; set; }
-		public string? Provider { get; set; }
+		public string? OldProvider { get; set; }
 		public DateTime? Date { get; set; }
 		public string? Status { get; set; }
 		public int? RequestedAmount { get; set; }
@@ -20,7 +20,7 @@ namespace Mux.Model
 		public ProductToBuy()
 		{
 			Id = 0;
-			Provider = "";
+			OldProvider = "";
 			Date = DateTime.Now;
 			Status = "";
 			RequestedAmount = 0;
