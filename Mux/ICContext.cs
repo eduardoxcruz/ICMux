@@ -21,6 +21,7 @@ public class ICContext : DbContext
 	public virtual DbSet<MountingTechnology> MountingTechnologies { get; set; }
 	public virtual DbSet<Provider> Providers { get; set; }
 	public virtual DbSet<Manufacturer> Manufacturers { get; set; }
+	public virtual DbSet<UnitType> UnitTypes { get; set; }
 
 	public ICContext()
 	{
