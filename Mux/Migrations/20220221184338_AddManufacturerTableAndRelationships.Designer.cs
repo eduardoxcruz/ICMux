@@ -3,17 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mux;
 
 #nullable disable
 
-namespace Inventory.Migrations
+namespace Mux.Migrations
 {
     [DbContext(typeof(ICContext))]
-    partial class ICContextModelSnapshot : ModelSnapshot
+    [Migration("20220221184338_AddManufacturerTableAndRelationships")]
+    partial class AddManufacturerTableAndRelationships
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
