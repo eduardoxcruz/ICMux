@@ -60,6 +60,7 @@ public class ICContext : DbContext
 		new EncapsulationTypeEntity().Configure(modelBuilder.Entity<EncapsulationType>());
 		new MountingTechnologyEntity().Configure(modelBuilder.Entity<MountingTechnology>());
 		new ProviderEntity().Configure(modelBuilder.Entity<Provider>());
+		new ManufacturerEntity().Configure(modelBuilder.Entity<Manufacturer>());
 	}
 
 	private static void StartRelationshipsConfiguration(ref ModelBuilder modelBuilder)
