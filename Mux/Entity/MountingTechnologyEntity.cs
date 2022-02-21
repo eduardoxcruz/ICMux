@@ -1,6 +1,17 @@
-﻿namespace Mux.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Mux.Model;
 
-public class MountingTechnologyEntity
+namespace Mux.Entity;
+
+public class MountingTechnologyEntity : IEntityTypeConfiguration<MountingTechnology>
 {
-	
+	public void Configure(EntityTypeBuilder<MountingTechnology> builder)
+	{
+		builder.HasKey(mountingTechnology => mountingTechnology.Id);
+
+		builder.Property(mountingTechnology => mountingTechnology.Id).ValueGeneratedOnAdd();
+
+		builder.Property(m => m.Name).HasMaxLength(30).IsUnicode();
+	}
 }
