@@ -21,6 +21,12 @@ namespace Mux.IndexProperty
 				.Entity<ProductToBuy>()
 				.HasIndex(productToBuy => productToBuy.ProviderId)
 				.IsUnique(false);
+			
+			modelBuilder
+				.Entity<ProductToBuy>()
+				.HasIndex(productToBuy => productToBuy.PetitionerId)
+				.IsUnique(false);
+
 		}
 	}
 }

@@ -15,12 +15,14 @@ namespace Mux.Model
 		public DateTime? ArrivalDate { get; set; }
 		public string? Comments { get; set; }
 		public DateTime? RequestDate { get; set; }
+		public int? PetitionerId { get; set; }
 		public int? RequestedAmount { get; set; }
 #pragma warning restore 8632
 		public Provider Provider { get; set; }
 		public int? ProductId { get; set; }
 		public Product Product { get; set; }
 		public Employee Seller { get; set; }
+		public Employee Petitioner { get; set; }
 
 		public ProductToBuy()
 		{
