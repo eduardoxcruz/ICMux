@@ -18,13 +18,13 @@ namespace Mux.Relationship
 						.WithMany()
 						.HasForeignKey("CategoryId")
 						.HasConstraintName("FK_ProductCategories_Categories_CategoryId")
-						.OnDelete(DeleteBehavior.ClientSetNull),
+						.OnDelete(DeleteBehavior.SetNull),
 					entityTypeBuilder => entityTypeBuilder
 						.HasOne<Product>()
 						.WithMany()
 						.HasForeignKey("ProductId")
 						.HasConstraintName("FK_ProductCategories_Products_ProductId")
-						.OnDelete(DeleteBehavior.ClientSetNull)
+						.OnDelete(DeleteBehavior.SetNull)
 				);
 		}
 	}
