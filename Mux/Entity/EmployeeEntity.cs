@@ -16,17 +16,19 @@ namespace Mux.Entity
 			builder
 				.Property(employee => employee.FullName)
 				.HasMaxLength(30)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(employee => employee.Password)
 				.HasMaxLength(10)
-				.IsUnicode(false);
+				.IsUnicode()
+				.IsRequired();
 
 			builder
 				.Property(employee => employee.Type)
 				.HasMaxLength(20)
-				.IsUnicode(false);
+				.IsUnicode()
+				.IsRequired();
 		}
 	}
 }
