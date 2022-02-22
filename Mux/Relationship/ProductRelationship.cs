@@ -11,25 +11,25 @@ namespace Mux.Relationship
 				.HasOne(product => product.EncapsulationType)
 				.WithMany(encapsulationType => encapsulationType.Products)
 				.HasForeignKey(product => product.EncapsulationTypeId)
-				.OnDelete(DeleteBehavior.ClientCascade);
+				.OnDelete(DeleteBehavior.SetNull);
 
 			modelBuilder.Entity<Product>()
 				.HasOne(product => product.MountingTechnology)
 				.WithMany(mountingTechnology => mountingTechnology.Products)
 				.HasForeignKey(product => product.MountingTechnologyId)
-				.OnDelete(DeleteBehavior.Cascade);
+				.OnDelete(DeleteBehavior.SetNull);
 
 			modelBuilder.Entity<Product>()
 				.HasOne(product => product.Manufacturer)
 				.WithMany(manufacturer => manufacturer.Products)
 				.HasForeignKey(product => product.ManufacturerId)
-				.OnDelete(DeleteBehavior.Cascade);
+				.OnDelete(DeleteBehavior.SetNull);
 
 			modelBuilder.Entity<Product>()
 				.HasOne(product => product.UnitType)
 				.WithMany(unitType => unitType.Products)
 				.HasForeignKey(product => product.UnitTypeId)
-				.OnDelete(DeleteBehavior.ClientSetNull);
+				.OnDelete(DeleteBehavior.SetNull);
 		}
 	}
 }
