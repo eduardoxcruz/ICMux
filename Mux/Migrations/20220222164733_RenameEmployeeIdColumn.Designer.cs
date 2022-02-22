@@ -3,17 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mux;
 
 #nullable disable
 
-namespace Inventory.Migrations
+namespace Mux.Migrations
 {
     [DbContext(typeof(ICContext))]
-    partial class ICContextModelSnapshot : ModelSnapshot
+    [Migration("20220222164733_RenameEmployeeIdColumn")]
+    partial class RenameEmployeeIdColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +40,7 @@ namespace Inventory.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Mux.Model.Employee", b =>
@@ -66,7 +68,7 @@ namespace Inventory.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("Mux.Model.EncapsulationType", b =>
@@ -94,7 +96,7 @@ namespace Inventory.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EncapsulationTypes", (string)null);
+                    b.ToTable("EncapsulationTypes");
                 });
 
             modelBuilder.Entity("Mux.Model.Manufacturer", b =>
@@ -114,7 +116,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("Id");
 
-                    b.ToTable("Manufacturers", (string)null);
+                    b.ToTable("Manufacturers");
                 });
 
             modelBuilder.Entity("Mux.Model.MountingTechnology", b =>
@@ -132,7 +134,7 @@ namespace Inventory.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MountingTechnologies", (string)null);
+                    b.ToTable("MountingTechnologies");
                 });
 
             modelBuilder.Entity("Mux.Model.Product", b =>
@@ -310,7 +312,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("UnitTypeId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Mux.Model.ProductChangelog", b =>
@@ -371,7 +373,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProviderId");
 
-                    b.ToTable("ProductChangeLogs", (string)null);
+                    b.ToTable("ProductChangeLogs");
                 });
 
             modelBuilder.Entity("Mux.Model.ProductRequest", b =>
@@ -412,7 +414,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductRequests", (string)null);
+                    b.ToTable("ProductRequests");
                 });
 
             modelBuilder.Entity("Mux.Model.ProductToBuy", b =>
@@ -462,7 +464,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProviderId");
 
-                    b.ToTable("ShoppingCart", (string)null);
+                    b.ToTable("ShoppingCart");
                 });
 
             modelBuilder.Entity("Mux.Model.Provider", b =>
@@ -482,7 +484,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("Id");
 
-                    b.ToTable("Providers", (string)null);
+                    b.ToTable("Providers");
                 });
 
             modelBuilder.Entity("Mux.Model.UnitType", b =>
@@ -502,7 +504,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("Id");
 
-                    b.ToTable("UnitTypes", (string)null);
+                    b.ToTable("UnitTypes");
                 });
 
             modelBuilder.Entity("ProductCategories", b =>
@@ -517,7 +519,7 @@ namespace Inventory.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductCategories", (string)null);
+                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("Mux.Model.Product", b =>
