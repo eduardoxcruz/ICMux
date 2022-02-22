@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 
+#nullable enable
+
 namespace Mux.Model
 {
 	public class Product
 	{
-#pragma warning disable 8632
 		public int Id { get; set; }
 		public string? DebugCode { get; set; }
 		public string Status { get; set; }
@@ -41,7 +42,6 @@ namespace Mux.Model
 		public int Egresses { get; set; }
 		public int AmountAdjustments { get; set; }
 		public int PriceAdjustments { get; set; }
-#pragma warning restore 8632
 		public int? EncapsulationTypeId { get; set; }
 		public EncapsulationType EncapsulationType { get; set; }
 		public int? MountingTechnologyId { get; set; }
