@@ -65,92 +65,92 @@ namespace Mux.Entity
 			builder
 				.Property(product => product.Category)
 				.HasMaxLength(50)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.DebugCode)
 				.HasMaxLength(30)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.Container)
 				.HasMaxLength(60)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.FullDescription)
-				.HasMaxLength(200)
-				.IsUnicode(false);
+				.HasComputedColumnSql("[Id] + ' - ' + [OldManufacturer] + ', ' + [Enrollment] + ', ' + [ShortDescription] + ', ' + [OldMountingTechnology] + ', ' + [OldEncapsulationType]")
+				.IsUnicode();
 
 			builder
 				.Property(product => product.ShortDescription)
 				.HasMaxLength(200)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.Rack)
 				.HasMaxLength(10)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.OldEncapsulationType)
 				.HasMaxLength(20)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.Status)
 				.HasMaxLength(10)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.Enrollment)
 				.HasMaxLength(60)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.Memo)
 				.HasMaxLength(70)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.PartNumber)
 				.HasMaxLength(30)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.OldManufacturer)
 				.HasMaxLength(50)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.Shelf)
 				.HasMaxLength(10)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.BranchOffice)
 				.HasMaxLength(10)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.OldMountingTechnology)
 				.HasMaxLength(16)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.TypeOfStock)
 				.HasMaxLength(20)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.Location)
 				.HasMaxLength(40)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(product => product.OldUnitType)
 				.HasMaxLength(10)
-				.IsUnicode(false);
+				.IsUnicode();
 		}
 	}
 }
