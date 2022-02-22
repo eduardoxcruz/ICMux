@@ -26,23 +26,13 @@ namespace Mux.Entity
 				.Property(recordOfProductMovement => recordOfProductMovement.PurchasePrice)
 				.HasPrecision(6, 2);
 
-			builder
-				.Property(recordOfProductMovement => recordOfProductMovement.EmployeeName)
-				.HasMaxLength(35)
-				.IsUnicode(false);
-
-			builder
-				.Property(recordOfProductMovement => recordOfProductMovement.ProductFullDescription)
-				.HasMaxLength(200)
-				.IsUnicode(false);
-
 			builder.Property(recordOfProductMovement => recordOfProductMovement.OldProvider)
 				.HasMaxLength(50)
 				.IsUnicode(false);
 
 			builder.Property(recordOfProductMovement => recordOfProductMovement.Type)
 				.HasMaxLength(10)
-				.IsUnicode(false);
+				.IsUnicode();
 		}
 	}
 }
