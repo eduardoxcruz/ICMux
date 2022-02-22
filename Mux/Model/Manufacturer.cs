@@ -12,5 +12,6 @@ public class Manufacturer
 	{
 		Id = 0;
 		BusinessName = "";
+		Products = new List<Product>();
 	}
 }
