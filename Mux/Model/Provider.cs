@@ -13,5 +13,7 @@ public class Provider
 	{
 		Id = 0;
 		BusinessName = "";
+		ProductChangelogs = new List<ProductChangelog>();
+		ShoppingCart = new List<ProductToBuy>();
 	}
 }
