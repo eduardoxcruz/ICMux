@@ -15,7 +15,7 @@ namespace Mux.Entity
 
 			builder.Property(e => e.Name)
 				.HasMaxLength(30)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder.Property(e => e.BodyWidth)
 				.HasMaxLength(30)
