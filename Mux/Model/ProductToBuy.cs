@@ -13,7 +13,6 @@ namespace Mux.Model
 		public DateTime? Date { get; set; }
 		public int? EmployeeId { get; set; }
 		public int? RequestedAmount { get; set; }
-		public string? EmployeeName { get; set; }
 #pragma warning restore 8632
 		public Provider Provider { get; set; }
 		public Product Product { get; set; }
@@ -26,7 +25,6 @@ namespace Mux.Model
 			Date = DateTime.Now;
 			Status = "";
 			RequestedAmount = 0;
-			EmployeeName = "";
 		}
 	}
 }

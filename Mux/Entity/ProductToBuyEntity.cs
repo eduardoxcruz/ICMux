@@ -19,11 +19,6 @@ namespace Mux.Entity
 			builder.Property(productForBuy => productForBuy.Date);
 
 			builder
-				.Property(productForBuy => productForBuy.EmployeeName)
-				.HasMaxLength(35)
-				.IsUnicode(false);
-
-			builder
 				.Property(productForBuy => productForBuy.OldProvider)
 				.HasMaxLength(35)
 				.IsUnicode(false);
