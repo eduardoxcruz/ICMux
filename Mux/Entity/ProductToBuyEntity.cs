@@ -35,6 +35,10 @@ namespace Mux.Entity
 			builder.Property(productToBuy => productToBuy.OrderReference)
 				.HasMaxLength(50)
 				.IsUnicode();
+			
+			builder.Property(productToBuy => productToBuy.Comments)
+				.HasMaxLength(100)
+				.IsUnicode();
 		}
 	}
 }
