@@ -16,9 +16,9 @@ namespace Mux.Relationship
 
 			modelBuilder
 				.Entity<ProductToBuy>()
-				.HasOne(productForBuy => productForBuy.Employee)
+				.HasOne(productForBuy => productForBuy.Seller)
 				.WithMany(employee => employee.ShoppingCart)
-				.HasForeignKey(productForBuy => productForBuy.EmployeeId)
+				.HasForeignKey(productForBuy => productForBuy.SellerId)
 				.OnDelete(DeleteBehavior.SetNull);
 
 			modelBuilder

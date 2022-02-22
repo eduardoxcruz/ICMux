@@ -11,14 +11,14 @@ namespace Mux.Model
 		public string? OldProvider { get; set; }
 		public string? OrderReference { get; set; }
 		public DateTime? LocationDate { get; set; }
-		public int? EmployeeId { get; set; }
+		public int? SellerId { get; set; }
 		public DateTime? RequestDate { get; set; }
 		public int? RequestedAmount { get; set; }
 #pragma warning restore 8632
 		public Provider Provider { get; set; }
 		public int? ProductId { get; set; }
 		public Product Product { get; set; }
-		public Employee Employee { get; set; }
+		public Employee Seller { get; set; }
 
 		public ProductToBuy()
 		{

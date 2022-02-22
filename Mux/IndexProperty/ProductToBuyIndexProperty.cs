@@ -14,7 +14,7 @@ namespace Mux.IndexProperty
 
 			modelBuilder
 				.Entity<ProductToBuy>()
-				.HasIndex(productForBuy => productForBuy.EmployeeId)
+				.HasIndex(productForBuy => productForBuy.SellerId)
 				.IsUnique(false);
 
 			modelBuilder
