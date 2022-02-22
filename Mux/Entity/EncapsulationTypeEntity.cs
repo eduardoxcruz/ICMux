@@ -22,7 +22,7 @@ namespace Mux.Entity
 				.IsUnicode();
 
 			builder.Property(e => e.FullDescription)
-				.HasComputedColumnSql("[Name] + ', ' + [BodyWidth]", stored: true);
+				.HasComputedColumnSql("[Name] + ' (' + [BodyWidth] + ')'", stored: true);
 		}
 	}
 }
