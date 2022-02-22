@@ -17,6 +17,7 @@ namespace Mux.Model
 			Id = 0;
 			Name = "";
 			FullDescription = "";
+			Products = new List<Product>();
 		}
 	}
 }
