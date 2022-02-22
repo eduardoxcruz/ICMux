@@ -12,26 +12,21 @@ namespace Mux.Entity
 
 			builder
 				.Property(productRequest => productRequest.Id)
-				.ValueGeneratedNever();
+				.ValueGeneratedOnAdd();
 
 			builder.Property(productRequest => productRequest.Amount);
 
 			builder.Property(productRequest => productRequest.Date);
 
 			builder
-				.Property(productRequest => productRequest.EmployeeName)
-				.HasMaxLength(35)
-				.IsUnicode(false);
-
-			builder
 				.Property(productRequest => productRequest.Type)
 				.HasMaxLength(35)
-				.IsUnicode(false);
+				.IsUnicode();
 
 			builder
 				.Property(productRequest => productRequest.Status)
 				.HasMaxLength(35)
-				.IsUnicode(false);
+				.IsUnicode();
 		}
 	}
 }
