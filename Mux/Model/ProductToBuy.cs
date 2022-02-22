@@ -11,8 +11,8 @@ namespace Mux.Model
 		public string? OldProvider { get; set; }
 		public string? OrderReference { get; set; }
 		public DateTime? LocationDate { get; set; }
-		public DateTime? RequestDate { get; set; }
 		public int? EmployeeId { get; set; }
+		public DateTime? RequestDate { get; set; }
 		public int? RequestedAmount { get; set; }
 #pragma warning restore 8632
 		public Provider Provider { get; set; }
