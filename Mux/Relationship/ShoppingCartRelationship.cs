@@ -12,7 +12,7 @@ namespace Mux.Relationship
 				.HasOne(productForBuy => productForBuy.Product)
 				.WithMany(product => product.ShoppingCart)
 				.HasForeignKey(productForBuy => productForBuy.ProductId)
-				.OnDelete(DeleteBehavior.Cascade);
+				.OnDelete(DeleteBehavior.SetNull);
 
 			modelBuilder
 				.Entity<ProductToBuy>()
