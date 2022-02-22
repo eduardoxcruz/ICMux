@@ -1,10 +1,11 @@
 ﻿using System;
 
+#nullable enable
+
 namespace Mux.Model
 {
 	public class ProductToBuy
 	{
-#pragma warning disable 8632
 		public int? Id { get; set; }
 		public string? Status { get; set; }
 		public int? ProviderId { get; set; }
@@ -17,7 +18,6 @@ namespace Mux.Model
 		public DateTime? RequestDate { get; set; }
 		public int? PetitionerId { get; set; }
 		public int? RequestedAmount { get; set; }
-#pragma warning restore 8632
 		public Provider Provider { get; set; }
 		public int? ProductId { get; set; }
 		public Product Product { get; set; }
