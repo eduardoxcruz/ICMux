@@ -11,7 +11,7 @@ namespace Mux.Model
 		public Category()
 		{
 			Id = 0;
-			Name = "N/A";
+			Name = "";
 			Products = new List<Product>();
 		}
 	}
