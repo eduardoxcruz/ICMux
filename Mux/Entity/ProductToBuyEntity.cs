@@ -27,6 +27,10 @@ namespace Mux.Entity
 				.Property(productForBuy => productForBuy.Status)
 				.HasMaxLength(10)
 				.IsUnicode(false);
+
+			builder.Property(productToBuy => productToBuy.OrderReference)
+				.HasMaxLength(50)
+				.IsUnicode();
 		}
 	}
 }
