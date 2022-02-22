@@ -12,6 +12,7 @@ namespace Mux.Model
 		public string? OrderReference { get; set; }
 		public DateTime? LocationDate { get; set; }
 		public int? SellerId { get; set; }
+		public DateTime? ArrivalDate { get; set; }
 		public DateTime? RequestDate { get; set; }
 		public int? RequestedAmount { get; set; }
 #pragma warning restore 8632
