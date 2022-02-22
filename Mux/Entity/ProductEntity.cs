@@ -79,7 +79,7 @@ namespace Mux.Entity
 
 			builder
 				.Property(product => product.FullDescription)
-				.HasComputedColumnSql("[Id] + ' - ' + [OldManufacturer] + ', ' + [Enrollment] + ', ' + [ShortDescription] + ', ' + [OldMountingTechnology] + ', ' + [OldEncapsulationType]")
+				.HasMaxLength(200)
 				.IsUnicode();
 
 			builder
