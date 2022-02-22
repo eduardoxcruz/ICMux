@@ -16,7 +16,7 @@ namespace Mux.Entity
 
 			builder.Property(productForBuy => productForBuy.RequestedAmount);
 
-			builder.Property(productForBuy => productForBuy.Date);
+			builder.Property(productForBuy => productForBuy.RequestDate);
 
 			builder
 				.Property(productForBuy => productForBuy.OldProvider)

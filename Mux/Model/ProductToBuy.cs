@@ -10,7 +10,7 @@ namespace Mux.Model
 		public int? ProviderId { get; set; }
 		public string? OldProvider { get; set; }
 		public string? OrderReference { get; set; }
-		public DateTime? Date { get; set; }
+		public DateTime? RequestDate { get; set; }
 		public int? EmployeeId { get; set; }
 		public int? RequestedAmount { get; set; }
 #pragma warning restore 8632
@@ -23,7 +23,7 @@ namespace Mux.Model
 		{
 			Id = 0;
 			OldProvider = "";
-			Date = DateTime.Now;
+			RequestDate = DateTime.Now;
 			Status = "";
 			RequestedAmount = 0;
 		}
