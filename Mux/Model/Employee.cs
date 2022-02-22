@@ -20,6 +20,9 @@ namespace Mux.Model
 			Type = "";
 			FullName = "";
 			Password = "";
+			ShoppingCart = new List<ProductToBuy>();
+			ProductRequests = new List<ProductRequest>();
+			ProductChangelogs = new List<ProductChangelog>();
 		}
 	}
 }
