@@ -12,5 +12,6 @@ public class UnitType
 	{
 		Id = 0;
 		Name = "";
+		Products = new List<Product>();
 	}
 }
