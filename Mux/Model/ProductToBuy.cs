@@ -9,6 +9,7 @@ namespace Mux.Model
 		public string? Status { get; set; }
 		public int? ProviderId { get; set; }
 		public string? OldProvider { get; set; }
+		public string? OrderReference { get; set; }
 		public DateTime? Date { get; set; }
 		public int? EmployeeId { get; set; }
 		public int? RequestedAmount { get; set; }
