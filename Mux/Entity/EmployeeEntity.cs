@@ -21,14 +21,12 @@ namespace Mux.Entity
 			builder
 				.Property(employee => employee.Password)
 				.HasMaxLength(10)
-				.IsUnicode()
-				.IsRequired();
+				.IsUnicode();
 
 			builder
 				.Property(employee => employee.Type)
 				.HasMaxLength(20)
-				.IsUnicode()
-				.IsRequired();
+				.IsUnicode();
 		}
 	}
 }
