@@ -42,13 +42,13 @@ namespace Mux.Model
 		public int AmountAdjustments { get; set; }
 		public int PriceAdjustments { get; set; }
 #pragma warning restore 8632
-		public int EncapsulationTypeId { get; set; }
+		public int? EncapsulationTypeId { get; set; }
 		public EncapsulationType EncapsulationType { get; set; }
-		public int MountingTechnologyId { get; set; }
+		public int? MountingTechnologyId { get; set; }
 		public MountingTechnology MountingTechnology { get; set; }
-		public int ManufacturerId { get; set; }
+		public int? ManufacturerId { get; set; }
 		public Manufacturer Manufacturer { get; set; }
-		public int UnitTypeId { get; set; }
+		public int? UnitTypeId { get; set; }
 		public UnitType UnitType { get; set; }
 		public List<ProductToBuy> ShoppingCart { get; set; }
 		public List<ProductRequest> ProductRequests { get; set; }
