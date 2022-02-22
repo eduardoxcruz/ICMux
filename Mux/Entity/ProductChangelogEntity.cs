@@ -12,7 +12,7 @@ namespace Mux.Entity
 
 			builder
 				.Property(recordOfProductMovement => recordOfProductMovement.Id)
-				.ValueGeneratedNever();
+				.ValueGeneratedOnAdd();
 
 			builder.Property(recordOfProductMovement => recordOfProductMovement.Amount);
 
