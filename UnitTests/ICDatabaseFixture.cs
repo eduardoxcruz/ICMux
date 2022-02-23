@@ -7,18 +7,18 @@ public class ICDatabaseFixture
 {
     private const string ConnectionString = "Server=192.168.0.254;Database=Testing;User Id=sa;Password=Tlacua015;";
     private static readonly object Lock = new();
-    private static bool DatabaseInitialized;
+    private static bool _databaseInitialized;
 
     public ICDatabaseFixture()
     {
         lock (Lock)
         {
-            if (!DatabaseInitialized)
+            if (!_databaseInitialized)
             {
                 using var context = CreateContext();
 
                 context.Database.EnsureCreated();
-                DatabaseInitialized = true;
+                _databaseInitialized = true;
             }
         }
     }
