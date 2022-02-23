@@ -54,6 +54,7 @@ namespace Mux.Model
 		public List<ProductRequest> ProductRequests { get; set; }
 		public List<ProductChangelog> ProductChangeLogs { get; set; }
 		public ICollection<Category> Categories { get; set; }
+		public List<ProductCategories> ProductCategories { get; set; }
 
 		public Product()
 		{
