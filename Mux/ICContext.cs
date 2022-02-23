@@ -91,5 +91,6 @@ public class ICContext : DbContext
 		new ProductRequestIndexProperty().Configure(ref modelBuilder);
 		new ProductToBuyIndexProperty().Configure(ref modelBuilder);
 		new ProductIndexProperty().Configure(ref modelBuilder);
+		new ProductCategoriesIndexProperty().Configure(ref modelBuilder);
 	}
 }
