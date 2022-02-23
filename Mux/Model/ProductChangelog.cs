@@ -15,7 +15,7 @@ namespace Mux.Model
 		public decimal? PurchasePrice { get; set; }
 		public string OldProvider { get; set; }
 		public int? EmployeeId { get; set; }
-		public Employee Employee { get; set; }
+		public Employee? Employee { get; set; }
 		public int? ProductId { get; set; }
 		public Product Product { get; set; }
 		public int? ProviderId { get; set; }
