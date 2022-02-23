@@ -18,7 +18,7 @@ namespace Mux.Model
 		public string? Comments { get; set; }
 		public DateTime RequestDate { get; set; }
 		public int? PetitionerId { get; set; }
-		public Employee Petitioner { get; set; }
+		public Employee? Petitioner { get; set; }
 		public string InternalReference { get; set; }
 		public string ProductDescription { get; set; }
 		public int RequestedAmount { get; set; }
