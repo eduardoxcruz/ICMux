@@ -34,6 +34,8 @@ public class ICContext : DbContext
 		_connectionString = connectionString;
 	}
 
+	public ICContext(DbContextOptions<ICContext> options) : base(options) {}
+
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
 		optionsBuilder.UseSqlServer(_connectionString);
