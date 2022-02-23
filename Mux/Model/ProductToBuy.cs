@@ -23,7 +23,7 @@ namespace Mux.Model
 		public string ProductDescription { get; set; }
 		public int RequestedAmount { get; set; }
 		public int? ProductId { get; set; }
-		public Product Product { get; set; }
+		public Product? Product { get; set; }
 		public string MountingTechnology { get; set; }
 		public string EncapsulationType { get; set; }
 		public string Priority { get; set; }
