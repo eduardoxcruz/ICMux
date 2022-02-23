@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Mux.Model;
 
 namespace Mux.Relationship
@@ -11,20 +10,17 @@ namespace Mux.Relationship
 			modelBuilder.Entity<Product>()
 				.HasMany(product => product.Categories)
 				.WithMany(category => category.Products)
-				.UsingEntity<Dictionary<string, object>>(
-					"ProductCategories",
+				.UsingEntity<ProductCategories>(
 					entityTypeBuilder => entityTypeBuilder
-						.HasOne<Category>()
-						.WithMany()
-						.HasForeignKey("CategoryId")
-						.HasConstraintName("FK_ProductCategories_Categories_CategoryId")
-						.OnDelete(DeleteBehavior.SetNull),
+						.HasOne(productCategories => productCategories.Category)
+						.WithMany(category => category.ProductCategories)
+						.HasForeignKey(productCategories => productCategories.CategoryId)
+						.OnDelete(DeleteBehavior.Cascade),
 					entityTypeBuilder => entityTypeBuilder
-						.HasOne<Product>()
-						.WithMany()
-						.HasForeignKey("ProductId")
-						.HasConstraintName("FK_ProductCategories_Products_ProductId")
-						.OnDelete(DeleteBehavior.SetNull)
+						.HasOne(productCategories => productCategories.Product)
+						.WithMany(product => product.ProductCategories)
+						.HasForeignKey(productCategories => productCategories.ProductId)
+						.OnDelete(DeleteBehavior.Cascade)
 				);
 		}
 	}
