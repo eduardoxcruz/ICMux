@@ -43,7 +43,7 @@ namespace Mux.Model
 		public int AmountAdjustments { get; set; }
 		public int PriceAdjustments { get; set; }
 		public int? EncapsulationTypeId { get; set; }
-		public EncapsulationType EncapsulationType { get; set; }
+		public EncapsulationType? EncapsulationType { get; set; }
 		public int? MountingTechnologyId { get; set; }
 		public MountingTechnology MountingTechnology { get; set; }
 		public int? ManufacturerId { get; set; }
