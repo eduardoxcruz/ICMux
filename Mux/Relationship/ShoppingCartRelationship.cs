@@ -20,6 +20,13 @@ namespace Mux.Relationship
 				.WithMany(employee => employee.ShoppingCart)
 				.HasForeignKey(productForBuy => productForBuy.SellerId)
 				.OnDelete(DeleteBehavior.SetNull);
+			
+			modelBuilder
+				.Entity<ProductToBuy>()
+				.HasOne(productForBuy => productForBuy.Petitioner)
+				.WithMany(employee => employee.ShoppingCart)
+				.HasForeignKey(productForBuy => productForBuy.PetitionerId)
+				.OnDelete(DeleteBehavior.SetNull);
 
 			modelBuilder
 				.Entity<ProductToBuy>()
