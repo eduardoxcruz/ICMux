@@ -83,6 +83,7 @@ namespace Mux.Model
 			ProductRequests = new List<ProductRequest>();
 			ProductChangeLogs = new List<ProductChangelog>();
 			Categories = new List<Category>();
+			ProductCategories = new List<ProductCategories>();
 		}
 	}
 }
