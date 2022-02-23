@@ -9,7 +9,7 @@ namespace Mux;
 
 public class ICContext : DbContext
 {
-	private readonly string _connectionString;
+	public static readonly string TestingConnectionString = "Server=192.168.0.254;Database=Testing;User Id=sa;Password=Tlacua015;";
 
 	public virtual DbSet<ProductToBuy> ShoppingCart { get; set; }
 	public virtual DbSet<ProductChangelog> ProductChangelogs { get; set; }
@@ -24,21 +24,14 @@ public class ICContext : DbContext
 	public virtual DbSet<UnitType> UnitTypes { get; set; }
 	public virtual DbSet<ProductCategories> ProductCategories { get; set; }
 
-	public ICContext()
-	{
-		_connectionString = "Server=192.168.0.254;Database=Testing;User Id=sa;Password=Tlacua015;";
-	}
+	public ICContext() : base(new DbContextOptionsBuilder<ICContext>().UseSqlServer(TestingConnectionString).Options) {}
 
-	public ICContext(string connectionString)
-	{
-		_connectionString = connectionString;
-	}
+	public ICContext(string connectionString) : base(new DbContextOptionsBuilder<ICContext>().UseSqlServer(connectionString).Options) {}
 
 	public ICContext(DbContextOptions<ICContext> options) : base(options) {}
 
 	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-		optionsBuilder.UseSqlServer(_connectionString);
 		optionsBuilder.EnableDetailedErrors();
 		optionsBuilder.EnableSensitiveDataLogging();
 	}
