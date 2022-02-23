@@ -1,6 +1,7 @@
-﻿namespace UnitTests;
+﻿using Xunit;
 
-public class ICControllerTest
+namespace UnitTests;
+
+public class ICControllerTest : IClassFixture<ICDatabaseFixture>
 {
-    
 }
