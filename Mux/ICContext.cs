@@ -12,7 +12,7 @@ public class ICContext : DbContext
 	private readonly string _connectionString;
 
 	public virtual DbSet<ProductToBuy> ShoppingCart { get; set; }
-	public virtual DbSet<ProductChangelog> ProductChangeLogs { get; set; }
+	public virtual DbSet<ProductChangelog> ProductChangelogs { get; set; }
 	public virtual DbSet<Product> Products { get; set; }
 	public virtual DbSet<ProductRequest> ProductRequests { get; set; }
 	public virtual DbSet<Employee> Employees { get; set; }
