@@ -32,7 +32,6 @@ namespace Mux.Model
 		public string Currency { get; set; }
 		public decimal ExtraCost { get; set; }
 		public decimal? ProductPriceWithIva { get; set; }
-		
 		public decimal SubTotal { get; set; }
 		public string? ProductUrl { get; set; }
 		
