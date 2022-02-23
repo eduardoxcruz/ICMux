@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Mux;
+﻿using Mux;
 
 namespace UnitTests;
 
@@ -25,10 +24,6 @@ public class ICDatabaseFixture
     
     public ICContext CreateContext()
     {
-        return new ICContext(new DbContextOptionsBuilder<ICContext>()
-            .UseSqlServer(ConnectionString)
-            .EnableDetailedErrors()
-            .EnableSensitiveDataLogging()
-            .Options);
+        return new ICContext();
     }
 }
