@@ -17,7 +17,7 @@ namespace Mux.Model
 		public int? EmployeeId { get; set; }
 		public Employee? Employee { get; set; }
 		public int? ProductId { get; set; }
-		public Product Product { get; set; }
+		public Product? Product { get; set; }
 		public int? ProviderId { get; set; }
 		public Provider Provider { get; set; }
 		
