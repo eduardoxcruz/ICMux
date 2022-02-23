@@ -1,6 +1,20 @@
-﻿namespace Mux.IndexProperty;
+﻿using Microsoft.EntityFrameworkCore;
+using Mux.Model;
 
-internal class ProductCategoriesIndexProperty
+namespace Mux.IndexProperty;
+
+internal class ProductCategoriesIndexProperty : IndexPropertyConfiguration
 {
-	
+	public void Configure(ref ModelBuilder modelBuilder)
+	{
+		modelBuilder
+			.Entity<ProductCategories>()
+			.HasIndex(productCategories => productCategories.ProductId)
+			.IsUnique(false);
+		
+		modelBuilder
+			.Entity<ProductCategories>()
+			.HasIndex(productCategories => productCategories.CategoryId)
+			.IsUnique(false);
+	}
 }
