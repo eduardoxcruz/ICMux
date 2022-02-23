@@ -22,6 +22,7 @@ public class ICContext : DbContext
 	public virtual DbSet<Provider> Providers { get; set; }
 	public virtual DbSet<Manufacturer> Manufacturers { get; set; }
 	public virtual DbSet<UnitType> UnitTypes { get; set; }
+	public virtual DbSet<ProductCategories> ProductCategories { get; set; }
 
 	public ICContext()
 	{
