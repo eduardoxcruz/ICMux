@@ -11,7 +11,7 @@ namespace Mux.Model
 		public int Amount { get; set; }
 		public string Type { get; set; }
 		public string Status { get; set; }
-		public Employee Employee { get; set; }
+		public Employee? Employee { get; set; }
 		public int? EmployeeId { get; set; }
 		public Product Product { get; set; }
 		public int? ProductId { get; set; }
