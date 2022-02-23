@@ -32,6 +32,8 @@ namespace Mux.Model
 		public string Currency { get; set; }
 		public decimal ExtraCost { get; set; }
 		public decimal? ProductPriceWithIva { get; set; }
+		
+		public decimal SubTotal { get; set; }
 		public string? ProductUrl { get; set; }
 		
 		public ProductToBuy()
@@ -48,6 +50,7 @@ namespace Mux.Model
 			IvaIncluded = false;
 			Currency = "MXN";
 			ExtraCost = 0.0M;
+			SubTotal = 0.0M;
 		}
 	}
 }
