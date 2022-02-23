@@ -13,7 +13,7 @@ namespace Mux.Model
 		public string? OrderReference { get; set; }
 		public DateTime? LocationDate { get; set; }
 		public int? SellerId { get; set; }
-		public Employee Seller { get; set; }
+		public Employee? Seller { get; set; }
 		public DateTime? ArrivalDate { get; set; }
 		public string? Comments { get; set; }
 		public DateTime RequestDate { get; set; }
